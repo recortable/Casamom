@@ -11,6 +11,10 @@ gem "simple_form"
 gem 'rdiscount', :require => 'rdiscount'
 gem 'jquery-rails'
 gem 'css3buttons'
+gem 'fog'
+gem 'carrierwave'
+gem 'mini_magick'
+#gem 'image_science'
 
 gem "mongoid", "~> 2.0"
 gem "bson_ext", "~> 1.3"

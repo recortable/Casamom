@@ -1,0 +1,12 @@
+<header>
+  <%= title 'Añadir fichero' %>
+</header>
+
+<%= simple_form_for asset do |form| %>
+    <%= form.input :name %>
+    <%= form.input :file, :as => :file %>
+    <div class="actions">
+      <%= button_submit_tag (asset.new_record? ? 'Subir fichero' : 'Actualizar fichero') %>
+      <%= link_to 'Cancelar', (asset.new_record? ? assets_path : [asset]) %>
+    </div>
+<% end %>
