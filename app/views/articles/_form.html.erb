@@ -1,0 +1,9 @@
+<%= simple_form_for(article) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :content, :as => :text %>
+    <%= f.input :published_on, :as => :date %>
+    <div class="actions">
+      <%= f.submit %>
+      <%= link_to 'Cancelar', (article.new_record? ? articles_path : article_path(article)) %>
+    </div>
+<% end %>

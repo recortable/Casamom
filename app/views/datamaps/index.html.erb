@@ -1,0 +1,17 @@
+<header>
+  <%= title 'Mapas' %>
+</header>
+
+<div class="strip">
+  <%= button_group do %>
+      <%= add_button_link_to 'Añadir mapa', new_datamap_path %>
+  <% end %>
+</div>
+
+<table>
+  <% datamaps.each do |datamap| %>
+  <tr>
+    <td><%= link_to datamap.name, datamap %></td>
+  </tr>
+  <% end %>
+</table>

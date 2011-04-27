@@ -1,0 +1,18 @@
+<header>
+  <h2>Artículo</h2>
+  <%= title article.name %>
+</header>
+<div class="strip">
+  <p>
+    <b>Fecha de publicación:</b>
+    <%= article.published_on %>
+  </p>
+  <%= button_group do %>
+      <%= edit_button_link_to 'Editar', edit_article_path(article) %>
+  <% end %>
+</div>
+<div class="content">
+  <%= article.content %>
+</div>
+
+

@@ -1,0 +1,14 @@
+<header>
+  <%= title datamap.name %>
+</header>
+<div class="strip">
+  <%= button_group do %>
+      <%= edit_button_link_to 'Editar', edit_datamap_path(datamap) %>
+  <% end %>
+</div>
+
+<div class="content">
+  <pre>
+    <%= datamap.data %>
+  </pre>
+</div>

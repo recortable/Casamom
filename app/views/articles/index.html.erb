@@ -1,0 +1,18 @@
+<header>
+  <%= title 'Artículos' %>
+</header>
+
+<div class="strip">
+  <%= button_group do %>
+      <%= add_button_link_to 'Añadir artículo', new_article_path %>
+  <% end %>
+</div>
+
+<table>
+  <% articles.each do |article| %>
+      <tr>
+        <td><%= link_to article.name, article %></td>
+      </tr>
+  <% end %>
+</table>
+

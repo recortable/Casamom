@@ -1,0 +1,8 @@
+<%= simple_form_for datamap do |form| %>
+    <%= form.input :name %>
+    <%= form.input :data, :as => :text %>
+    <div class="actions">
+      <%= button_submit_tag "Crear mapa" %>
+      <%= link_to 'Cancelar', (datamap.new_record? ? datamaps_path : datamap_path(datamap)) %>
+    </div>
+<% end %>
