@@ -11,13 +11,13 @@ set :scm, "git"
 set :repository,  "git://github.com/recortable/Casamom.git"
 set :branch, "master"
 set :deploy_via, :remote_cache
-set :scm_verbose, true
+set :scm_verbose, false
 
 role :app, "recortable.net"
 role :web, "recortable.net"
 role :db,  "recortable.net", :primary => true
 
-after "deploy:update_code", "config:copy_shared_configurations"
+#after "deploy:update_code", "config:copy_shared_configurations"
 after "deploy", "deploy:cleanup"
 
 # Configuration Tasks
