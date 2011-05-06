@@ -18,6 +18,7 @@ gem 'mini_magick'
 
 gem "mongoid", "~> 2.0"
 gem "bson_ext", "~> 1.3"
+gem 'mongoid_acts_as_tree'
 
 # Use unicorn as the web server
 gem 'unicorn'

@@ -6,3 +6,19 @@
       <%= add_button_link_to 'Añadir fichero', new_asset_path %>
   <% end %>
 </div>
+
+<table>
+  <% assets.each do |asset| %>
+      <tr>
+        <td style="font-size: 20%;">
+          <%= minor_button_group do %>
+              <%= edit_button_link_to 'Editar', [:edit, asset] %>
+              <%= trash_button_link_to 'Borrar', [asset], :method => :delete,
+                                        :confirm => "Delete #{asset.name}?" %>
+          <% end %>
+        </td>
+        <td><%= asset.name %></td>
+        <td><%= asset.file_url %></td>
+      </tr>
+  <% end %>
+</table>

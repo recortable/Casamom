@@ -1,4 +1,5 @@
 # encoding: utf-8
+require 'carrierwave/processing/mini_magick'
 
 class FileUploader < CarrierWave::Uploader::Base
 
@@ -18,7 +19,7 @@ class FileUploader < CarrierWave::Uploader::Base
   end
 
   version :thumb do
-    process :resize_to_limit => [200, 200]
+    process :resize_to_fit => [200, 200]
   end
 
 
